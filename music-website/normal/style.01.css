@@ -1,9 +1,9 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 html, body {
+    padding: 0;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
@@ -19,8 +19,7 @@ html, body {
     --grey: #b1b1b1;
 }
 
-/* starting to style navbar from here on to make it look like 
-the webpage */
+/* navbar from here on */
 
 nav {
     width: 100%;
@@ -45,11 +44,13 @@ a:hover {
     width: 50px;
     height: 35px;
     margin: 2.5px 5px 2.5px 10px;
+    float: left;
 }
 .left-links .links {
     margin: 12px 0 5px 20px;
     font-weight: 600;
     font-size: 0.9em;
+    float: left;
 }
 .right-links {
     width: 30%;
@@ -69,6 +70,12 @@ a:hover {
     width: 100%;
     margin: 15px 0;
 }
+.chosen {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+}
 .choose a {
     font-weight: 600;
     font-size: 0.9em; 
@@ -85,15 +92,16 @@ main {
 }
 .num-1 {
     width: 100%;
+    height: fit-content;
+    margin-bottom: 60px;
 }
 .num-1 img {
     width: 84%;
-    height: 400px;
     margin: 0 8% 10px 8%;
+    aspect-ratio: 16 / 9;
 }
 .numhead-1 {
     width: 60%;
-    height: 150px;
     margin: 30px 20% 20px 20%;
 }
 /* end of number 1 */
@@ -101,44 +109,44 @@ main {
 .num-2 {
     position: relative;
     width: 100%;
-    height: 500px;
     display: flex;
     margin: 60px 0;
 }
 .num-2 img {
-    width: 450px;
-    height: 450px;
-    margin: 75px 0 75px 80px;
-    z-index: 2;
+
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    z-index: 1;
+    margin: 15% 0 15% 8%;
 }
 .emp-1 {
-    right: 0;
     position: absolute;
-    height: 500px;
-    width: 65%;
+    width: 70%;
+    aspect-ratio: 1 / 1;
     background-color: var(--yellow);
+    right: 0;
 }
 .emp-1 img {
     position: absolute;
-    width: 300px;
-    height: 200px;
-    right: 0;
-    margin: 150px 80px 150px 80px;
+    right: 10%;
+    width: 50%;
+    margin-top: 35%;
+    aspect-ratio: 3 / 2;
 }
 /* end of number 2 */
 
 .num-3 {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 900px;
-    margin-bottom: 30px;
 }
-.num-3 img {
+.num-3 img, .mid-img {
     width: 60%;
-    height: 450px;
-    margin: 30px 20% 0 20%;
+    aspect-ratio: 16 / 9;
+    margin: 0 20%;
 }
-.num-3 span {
-    margin: 5px 20% 30px 20%;
+.num-3 span, .mid-img-span {
+    margin: 5px 20% 0 20%;
 }
 /* end of number 3 */
 
@@ -146,96 +154,84 @@ main {
     display: flex;
     position: relative;
     width: 100%;
-    margin-bottom: 60px;
 }
 .num-4 .imgg {
     position: absolute;
-    width: 45%;
-    height: 470px;
+    width: 40%;
     right: 0;
-    margin: 115px 80px;
-    z-index: 2;
+    aspect-ratio: 1 / 1;
+    margin-right: 8%;
+    margin-top: 8.5rem;
 }
 .emp-2 {
-    width: 55%;
-    height: 700px;
+    width: 60%;
+    aspect-ratio: 1 / 1;
     background-color: var(--green);
 }
 .emp-2 img {
     width: 60%;
-    height: 260px;
-    margin: 60px 0 0 80px;
+    aspect-ratio: 16 / 9;
+    margin-left: 13.4%;
+    margin-top: 80px;
 }
 /* end of number 4 */
 
 .num-5 {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 910px;
-}
-.num-5 img {
-    width: 80%;
-    margin: 20px 10% 0 10%;
-}
-.num-5 span {
-    width: 80%;
-    margin: 0 10% 60px 10%;
 }
 /*  end of number 5  */
 
 .num-6 {
-    width: 100%;
-    height: 700px;
     display: flex;
     position: relative;
+    width: 100%;
 }
 .emp-3 {
-    position: absolute;
     width: 70%;
     background-color: var(--voilet);
-    height: 700px;
-    margin: 0 15%;
+    margin: 80px 15%;
+    aspect-ratio: 7 / 6
 }
 .num-6 .imgg-2 {
-    width: 350px;
-    height: 250px;
-    z-index: 1;
-    margin: 225px 0 225px 80px;
+    position: absolute;
+    width: 40%;
+    margin: 24% 0 0 8%;
+    aspect-ratio: 3 / 2;
 }
 .num-6 .imgg-3 {
     position: absolute;
     right: 0;
-    width: 500px;
-    height: 500px;
-    margin: 100px 0 100px 0;
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    margin-top: 18%;
 }
 /* ending of number 6  */
 
-.num-7 {
-    width: 100%;
-    height: 180px;
-}
+/* no code for number 7 */
+
 /* ending of number 7 */
 
 .emp-4 {
     width: 100%;
-    height: 600px;
-    border-bottom: 1px solid #b1b1b1;
 }
 .num-8 {
     display: flex;
+    position: relative;
     width: 84%;
-    height: 500px;
-    margin: 60px 8%;
     background-color: var(--light-blue);
+    margin: 80px 8%;
 }
 .num-8 img {
-    height: 500px;
-    width: 50%;
+    width: 59.3%;
+    aspect-ratio: 1 / 1;
 }
 .emp-5 {
-    width: 50%;
-    height: 500px;
-    padding: 100px;
+    position: absolute;
+    right: 0;
+    width: 40%;
+    padding: 8%;
     line-height: 40px;
     letter-spacing: 1px;
 }
@@ -244,60 +240,71 @@ main {
 /* ending of main section */
 
 /* starting of footer */
+
 footer {
     margin-top: 50px;
     width: 100%;
 }
 .ft-site-nm {
     font-size: 2em;
-    margin-left: 80px;
+    margin-left: 8%;
 }
 .row {
     display: flex;
+    flex-direction: row;
     width: 100%;
-    padding: 50px 80px 0 80px;
+    padding: 0 8%;
 }
 .colm-1 {
     width: 30%;
     line-height: 30px;
+    font-weight: 700;
 }
-.colm-2 {
+.colm-2  {
+    padding-left: 8%;
     width: 40%;
     line-height: 30px;
-    position: relative;
-    padding-left: 15px;
+    font-weight: 700;
 }
 .pad-top {
     padding-top: 21.28px;
 }
-.colm-1 a, .colm-2 a {
-    font-weight: 700;
+.fa-brands {
+    margin-top: 20px;
+    font-size: 2.5em;
 }
-.row h4 {
-    margin-bottom: 0;
-    margin-top: 0;
+.fa-facebook, .fa-twitter {
+    color: #0000ff;
+}
+.fa-youtube, .fa-instagram {
+    color: #ff0000;
+}
+form {
+    display: flex;
+    position: relative;
 }
 #email {
     width: 70%;
-    margin: 0;
     height: 30px;
+    margin-bottom: 10px;
     background-color: #fffefede;
     color: #1d1d1d;
 }
-.btn{
+.btn-lbl {
     position: absolute;
+    text-align: center;
+    bottom: 10px;
     right: 0;
-    top: 142px;
-    width: 120px;
+    width: 30%;
     height: 30px;
     color: #fff;
+    cursor: pointer;
     background-color: var(--blue);
 }
 #language, #location {
     font-family: monospace;
     font-weight: 600;
 }
-/* end of upper footer */
 
 /* starting of end page */
 .page-end {
@@ -307,7 +314,7 @@ footer {
     height: 40px;
     border-top: 1px solid #b1b1b1;
     margin: 30px 0 0 0;
-    padding: 10px 80px;
+    padding: 10px 8%;
 }
 .page-end a {
     margin-right: 20px;
@@ -315,10 +322,53 @@ footer {
 }
 .page-end span {
     position: absolute;
-    right: 80px;
+    right: 10.5%;
 }
-.page-end span img {
-    width: 30px;
-    height: 20px;
+.page-end img {
+    position: absolute;
+    right: 8%;
+    width: 25px;
+    aspect-ratio: 1 / 1;
+}
+.key {
+    animation: delay linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+.keys {
+    animation: delay linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 20%;
+}
+.keyed {
+    animation: delay linear both;
+    animation-timeline: view();
+    animation-range: entry 80% cover 45%;
 }
 /* end of all styling */
+
+/* animation panel */
+@keyframes delay {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* end of animation panel */
+
+/* start of media queries */
+@media (min-width: 861px) and (max-width: 1000px) {
+    .emp-5 {
+        font-size: 0.9em;
+        line-height: 30px;
+    }
+}
+@media (max-width: 860px) {
+    .right-links {
+       position: absolute;
+    }
+}
